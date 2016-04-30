@@ -2,7 +2,7 @@
 
 <ul>
   <% @posts.each do |post| %>
-  <li><%= link_to post.title, post %> | <%= post.content %></li>
+  <li><%= link_to post.title, post %> | <%= post.content %> | by <%= post.user.name %></li>
   <% end %>
 </ul>
 

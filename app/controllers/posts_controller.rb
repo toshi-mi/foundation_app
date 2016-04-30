@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(post_params)
+    @current_user = User.find_by(id: session[:user_id])
+    @post = @current_user.posts.build(post_params)
     @post.save
     redirect_to root_path
   end
@@ -15,6 +16,7 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find(params[:id])
+    @current_user = User.find_by(id: session[:user_id])
   end
   
   def edit
