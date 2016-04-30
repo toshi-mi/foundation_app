@@ -1,0 +1,15 @@
+<h1>編集ページ</h1>
+
+<%= form_for(@post) do |f| %>
+
+<p>
+  タイトル | <%= f.text_field :title %>
+</p>
+
+<p>
+  内容 | <%= f.text_area :content %>
+</p>
+
+<%= f.submit '更新' %>
+
+<% end %>

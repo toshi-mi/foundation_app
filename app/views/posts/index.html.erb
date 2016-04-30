@@ -1,0 +1,9 @@
+<h1>投稿の一覧</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+  <li><%= link_to post.title, post %> | <%= post.content %></li>
+  <% end %>
+</ul>
+
+<%= link_to '投稿の作成', new_post_path %>

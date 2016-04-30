@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'welcome#top'
   
   resources :users
+  resources :posts
   
   
 
