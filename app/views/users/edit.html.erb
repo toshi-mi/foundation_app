@@ -1,0 +1,23 @@
+<h1><%= @user.name %>さんの編集ページ</h1>
+
+<%= form_for(@user) do |f| %>
+
+<p>
+  ログインID | <%= f.text_field :login_id %>
+</p>
+
+<p>
+  名前 | <%= f.text_field :name %>
+</p>
+
+<p>
+  メールアドレス | <%= f.email_field :email %>
+</p>
+
+<p>
+  プロフィール | <%= f.text_area :profile %>
+</p>
+
+<%= f.submit '更新' %>
+
+<% end %>

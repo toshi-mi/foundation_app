@@ -1,0 +1,29 @@
+<h1>ユーザーの登録</h1>
+
+<%= form_for(@user) do |f| %>
+
+<p>
+ログインID | 
+<%= f.text_field :login_id %>
+</p>
+
+<P>
+名前 |
+<%= f.text_field :name %>
+</P>
+
+<p>
+メールアドレス |
+<%= f.email_field :email %>
+</p>
+
+<p>
+プロフィール |
+<%= f.text_area :profile %>
+</p>
+
+<p>
+<%= f.submit '登録' %>
+</p>
+
+<% end %>
