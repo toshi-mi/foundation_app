@@ -1,5 +1,6 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.content %></p>
+<%= @post.likes.count %><%= link_to 'いいね！', like_path(@post.id), method: :post %>
 <% if @current_user == @post.user %>
 <%= link_to '編集', edit_post_path %> | <%= link_to '削除', post_path, method: :delete %>
 <% end %>
